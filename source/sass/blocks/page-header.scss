@@ -1,5 +1,203 @@
 .page-header {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
-  background-color: aquamarine;
+  align-items: flex-start;
+  width: 100%;
+  min-height: 825px;
+  background-color: $basic-black;
+  background-image: url("../img/header-bg-desktop@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (max-width: $desktop-width) {
+    background-color: $basic-white;
+    background-image: url("../img/header-bg-tablet@1x.jpg");
+    background-size: contain;
+  }
+
+  @media (max-width: $tablet-width) {
+    background-image: none;
+  }
+
+  &--nojs,
+  &--opened {
+    @media (max-width: $desktop-width) {
+      .page-header__navigation {
+        display: flex;
+      }
+
+      .page-header__toggle {
+        background-color: inherit;
+        background-image: url("../img/icon-close.svg");
+      }
+    }
+  }
+
+  &--opened {
+    @media (max-width: $desktop-width) {
+      .page-header__navigation {
+        display: flex;
+      }
+
+      .page-header__toggle {
+        background-color: inherit;
+        background-image: url("../img/icon-close.svg");
+      }
+    }
+  }
+
+  &--closed {
+    @media (max-width: $desktop-width) {
+      .page-header__navigation {
+        display: none;
+      }
+
+      .page-header__toggle {
+        background-color: $basic-turquoise;
+        background-image: url("../img/icon-burger.svg");
+      }
+    }
+  }
+}
+
+.page-header__inner {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.page-header__toggle {
+  display: none;
+  flex-wrap: wrap;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: $basic-turquoise;
+  background-image: url("../img/icon-burger.svg");
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: center;
+  cursor: pointer;
+
+  @media (max-width: $desktop-width) {
+    display: flex;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+  }
+
+  &--open {
+    background-color: inherit;
+    background-image: url("../img/icon-close.svg");
+  }
+}
+
+.page-header__navigation {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (max-width: $desktop-width) {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $basic-white;
+    z-index: 1;
+  }
+}
+
+.page-header__description {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  color: $basic-white;
+
+  @media (max-width: $desktop-width) {
+    width: 100%;
+    padding-top: 25px;
+    margin-bottom: 19.5%;
+  }
+
+  @media (max-width: $tablet-width) {
+    align-content: flex-start;
+    min-height: 390px;
+    margin-bottom: 22%;
+    background-color: $basic-black;
+    background-image: url("../../img/header-bg-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.page-header__description svg {
+  width: 67px;
+  height: 20px;
+  margin-left: 23px;
+
+  @media (max-width: $tablet-width) {
+    margin-left: 18px;
+  }
+}
+
+.page-header__description h2 {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 28px;
+  margin-bottom: 4px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 46px;
+  line-height: 64px;
+  letter-spacing: -0.005em;
+
+  @media (max-width: $desktop-width) {
+    justify-content: center;
+    width: 100%;
+    margin-top: 11.2%;
+    font-size: 30px;
+    line-height: 42px;
+    margin-bottom: 18px;
+  }
+
+  @media (max-width: $tablet-width) {
+    text-align: center;
+    margin-top: 22.1%;
+  }
+}
+
+.page-header__description p {
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 20px;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: -0.005em;
+  mix-blend-mode: normal;
+  opacity: 0.8;
+
+  @media (max-width: $desktop-width) {
+    max-width: 435px;
+    margin: 0 auto;
+    padding-left: 20px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: center;
+  }
+}
+
+.page-header__form {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 113px;
+  padding-right: 10px;
+
+  @media (max-width: $desktop-width) {
+    padding: 0;
+  }
 }
