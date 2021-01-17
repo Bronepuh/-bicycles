@@ -1,0 +1,115 @@
+.contacts {
+  width: 100%;
+}
+
+.contacts__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 565px;
+  margin: 0;
+  padding: 0;
+  padding-top: 22px;
+  list-style: none;
+
+  @media (max-width: $desktop-width) {
+    padding-top: 2px;
+  }
+
+  @media (max-width: $tablet-width) {
+    justify-content: center;
+    width: 100%;
+    padding-top: 13px;
+    padding-left: 28px;
+    padding-right: 20px;
+  }
+}
+
+.contacts__item {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  @media (max-width: $desktop-width) {
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-right: 0;
+  }
+
+  &:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 26px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &--email {
+    &::before {
+      top: 2px;
+      background-image: url("../img/icon-email.svg");
+
+      @media (max-width: $desktop-width) {
+        left: 3px;
+      }
+    }
+  }
+
+  &--tel {
+    padding-top: 3px;
+    padding-right: 15px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: 0.001em;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      width: 22px;
+      height: 24px;
+      background-image: url("../img/icon-phone.svg");
+      background-size: cover;
+
+      @media (max-width: $desktop-width) {
+        left: 8px;
+      }
+    }
+
+    @media (max-width: $tablet-width) {
+      margin-left: 22px;
+    }
+
+    @media (max-width: 520px) {
+      margin-left: -12px;
+    }
+  }
+}
+
+.contacts a {
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.5);
+
+  @media (max-width: $desktop-width) {
+    padding-left: 44px;
+  }
+}

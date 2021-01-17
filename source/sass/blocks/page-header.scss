@@ -3,6 +3,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+  align-content: flex-start;
   width: 100%;
   min-height: 825px;
   background-color: $basic-black;
@@ -11,12 +12,8 @@
   background-size: cover;
 
   @media (max-width: $desktop-width) {
+    min-height: auto;
     background-color: $basic-white;
-    background-image: url("../img/header-bg-tablet@1x.jpg");
-    background-size: contain;
-  }
-
-  @media (max-width: $tablet-width) {
     background-image: none;
   }
 
@@ -65,7 +62,11 @@
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
-  max-width: 900px;
+  width: 900px;
+
+  @media (max-width: $desktop-width) {
+    width: 100%;
+  }
 }
 
 .page-header__toggle {
@@ -113,41 +114,55 @@
 .page-header__description {
   display: flex;
   flex-wrap: wrap;
+  align-content: flex-start;
   width: 50%;
+  min-height: 340px;
+  padding-left: 10px;
   color: $basic-white;
 
   @media (max-width: $desktop-width) {
     width: 100%;
     padding-top: 25px;
-    margin-bottom: 19.5%;
+    padding-left: 0;
+    margin-bottom: 70px;
+    background-image: url("../img/header-bg-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   @media (max-width: $tablet-width) {
     align-content: flex-start;
     min-height: 390px;
-    margin-bottom: 22%;
-    background-color: $basic-black;
+    // padding-bottom: 22%;
+    background-color: rgba(28, 28, 28, 1);
     background-image: url("../../img/header-bg-mobile@1x.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    background-position: center;
   }
 }
 
 .page-header__description svg {
   width: 67px;
   height: 20px;
-  margin-left: 23px;
+  margin-left: 0;
+  margin-bottom: 28px;
+
+  @media (max-width: $desktop-width) {
+    margin-left: 23px;
+  }
 
   @media (max-width: $tablet-width) {
-    margin-left: 18px;
+    width: 70px;
+    margin-left: 16px;
   }
 }
 
 .page-header__description h2 {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 28px;
-  margin-bottom: 4px;
+  margin-top: 0;
+  margin-bottom: 5px;
   font-style: normal;
   font-weight: bold;
   font-size: 46px;
@@ -157,15 +172,15 @@
   @media (max-width: $desktop-width) {
     justify-content: center;
     width: 100%;
-    margin-top: 11.2%;
+    margin-top: 7.6%;
     font-size: 30px;
     line-height: 42px;
     margin-bottom: 18px;
   }
 
   @media (max-width: $tablet-width) {
+    margin-top: 13.6%;
     text-align: center;
-    margin-top: 22.1%;
   }
 }
 

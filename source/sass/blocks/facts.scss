@@ -1,0 +1,145 @@
+.facts {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-bottom: 131px;
+
+  @media (max-width: $desktop-width) {
+    padding-top: 70px;
+    padding-bottom: 16px;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 15px;
+  }
+}
+
+.facts h2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 58px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 30px;
+  letter-spacing: -0.005em;
+  color: $basic-darck-2;
+
+  @media (max-width: $desktop-width) {
+    margin-bottom: 40px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 41px;
+    text-align: center;
+    letter-spacing: -0.005em;
+  }
+}
+
+.facts__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0;
+  line-height: 0;
+
+  @media (max-width: $desktop-width) {
+    max-width: 557px;
+    justify-content: space-between;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.facts__item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 263px;
+  height: auto;
+  margin-right: 38px;
+
+  &:nth-child(2) {
+    @media (max-width: $tablet-width) {
+      margin-bottom: 35px;
+    }
+  }
+
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
+
+  &:nth-child(3n) {
+    @media (max-width: 1200px) {
+      margin-right: 0;
+    }
+
+    @media (max-width: $tablet-width) {
+      margin-bottom: 36px;
+    }
+  }
+
+  @media (max-width: $desktop-width) {
+    margin-right: 0;
+    margin-bottom: 32px;
+  }
+
+  @media (max-width: $tablet-width) {
+    justify-content: center;
+    width: 100%;
+  }
+
+  &:first-child p {
+    @media (max-width: $tablet-width) {
+      margin-top: 25px;
+      margin-bottom: 14px;
+    }
+  }
+}
+
+.facts__item span {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: -1.27273px;
+  color: $basic-turquoise;
+}
+
+.facts__item p {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 34px;
+  text-align: center;
+  letter-spacing: -0.5px;
+
+  @media (max-width: $desktop-width) {
+    justify-content: center;
+    width: 263px;
+  }
+
+  @media (max-width: $tablet-width) {
+    font-size: 18px;
+  }
+}

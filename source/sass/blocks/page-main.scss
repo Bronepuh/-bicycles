@@ -1,5 +1,10 @@
 .page-main {
   display: flex;
   flex-wrap: wrap;
-  background-color: bisque;
+  width: 100%;
+  padding-top: 152px;
+
+  @media (max-width: $desktop-width) {
+    padding-top: 0;
+  }
 }
