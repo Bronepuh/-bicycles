@@ -79,4 +79,13 @@
     line-height: 28px;
     color: $basic-grey;
   }
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }

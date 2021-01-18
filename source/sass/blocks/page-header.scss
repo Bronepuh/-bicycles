@@ -20,6 +20,11 @@
   &--nojs,
   &--opened {
     @media (max-width: $desktop-width) {
+      position: fixed;
+      top: 0;
+      height: 100%;
+      z-index: 3;
+
       .page-header__navigation {
         display: flex;
       }
@@ -45,6 +50,8 @@
   }
 
   &--closed {
+    position: relative;
+
     @media (max-width: $desktop-width) {
       .page-header__navigation {
         display: none;
@@ -140,6 +147,10 @@
     background-size: contain;
     background-position: center;
   }
+}
+
+.page-header__description a {
+  cursor: text;
 }
 
 .page-header__description svg {

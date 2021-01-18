@@ -73,14 +73,28 @@
 }
 
 .bicycles__item {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-content: flex-start;
   width: 342px;
-  height: 503px;
   margin-top: 10px;
   margin-bottom: 50px;
   margin-right: 50px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 155px;
+    left: -60px;
+    width: 180px;
+    height: 180px;
+    background-image: url("../img/icon-ellipse.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+  }
 
   @media (max-width: 1200px) {
     width: 290px;
@@ -91,14 +105,27 @@
     height: 300px;
     margin-top: 0;
     margin-bottom: 54px;
+
+    &::before {
+      top: 201px;
+      left: -37px;
+      width: 127px;
+      height: 127px;
+    }
   }
 
   @media (max-width: 980px) {
     margin-right: 0;
   }
 
+  @media (max-width: $tablet-width) {
+    &::before {
+      top: 201px;
+      left: -25px;
+    }
+  }
+
   @media (max-width: 690px) {
-    width: 100%;
     margin-right: 0;
   }
 
@@ -106,9 +133,46 @@
     margin-top: 39px;
     height: 566px;
 
+    &::before {
+      position: absolute;
+      content: "";
+      top: -18px;
+      left: -18px;
+      width: 47px;
+      height: 47px;
+      background-image: url("../img/icon-square.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: 2;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: -23px;
+      right: -23px;
+      width: 47px;
+      height: 47px;
+      background-image: url("../img/icon-square.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: 2;
+    }
+
+    @media (max-width: 1200px) {
+      &::after {
+        bottom: 65px;
+      }
+    }
+
     @media (max-width: $desktop-width) {
       margin-top: 0;
       height: 300px;
+
+      &::before,
+      &::after {
+        display: none;
+      }
     }
 
     @media (max-width: 980px) {
@@ -116,7 +180,6 @@
     }
 
     @media (max-width: 690px) {
-      width: 100%;
       margin-right: 0;
     }
   }
@@ -126,17 +189,44 @@
     margin-top: 0;
     margin-right: 0;
 
+    &::before {
+      position: absolute;
+      content: "";
+      top: -32px;
+      right: -36px;
+      left: auto;
+      width: 95px;
+      height: 95px;
+      background-image: url("../../img/icon-ellipse.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: 2;
+    }
+
     @media (max-width: $desktop-width) {
       margin-top: 0;
       height: 300px;
+
+      &::before {
+        top: -20px;
+        right: -25px;
+        width: 68px;
+        height: 68px;
+      }
     }
 
     @media (max-width: 980px) {
       margin-right: 0;
     }
 
+    @media (max-width: $tablet-width) {
+      &::before {
+        top: -20px;
+        right: -14px;
+      }
+    }
+
     @media (max-width: 690px) {
-      width: 100%;
       margin-right: 0;
     }
   }
@@ -148,6 +238,54 @@
       margin-bottom: 38px;
     }
   }
+
+  &:nth-child(1) img {
+    content: url("../img/card-1-desktop@1x.webp");
+
+    @media (min-resolution: 2dppx) {
+      content: url("../img/card-1-desktop@2x.webp");
+    }
+
+    @media (max-width: $desktop-width) {
+      content: url("../img/card-1-tablet@1x.webp");
+
+      @media (min-resolution: 2dppx) {
+        content: url("../img/card-1-tablet@2x.webp");
+      }
+    }
+  }
+
+  &:nth-child(2) img {
+    content: url("../img/card-2-desktop@1x.webp");
+
+    @media (min-resolution: 2dppx) {
+      content: url("../img/card-2-desktop@2x.webp");
+    }
+
+    @media (max-width: $desktop-width) {
+      content: url("../img/card-2-tablet@1x.webp");
+
+      @media (min-resolution: 2dppx) {
+        content: url("../img/card-2-tablet@2x.webp");
+      }
+    }
+  }
+
+  &:nth-child(3) img {
+    content: url("../img/card-3-desktop@1x.webp");
+
+    @media (min-resolution: 2dppx) {
+      content: url("../img/card-3-desktop@2x.webp");
+    }
+
+    @media (max-width: $desktop-width) {
+      content: url("../img/card-3-tablet@1x.webp");
+
+      @media (min-resolution: 2dppx) {
+        content: url("../img/card-3-tablet@2x.webp");
+      }
+    }
+  }
 }
 
 .bicycles img {
@@ -155,13 +293,29 @@
   flex-wrap: wrap;
   width: 100%;
   height: auto;
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+
+  @media (max-width: $tablet-width) {
+    // width: 230px;
+  }
+
+  &:hover,
+  &:focus {
+    margin-top: -5px;
+    box-shadow: 0 0 10px $basic-black;
+    opacity: 0.6;
+  }
 }
 
-.bicycles__item__link {
+.bicycles__item-link {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   justify-content: center;
+  z-index: 1;
 }
 
 .bicycles a {
@@ -178,4 +332,14 @@
   letter-spacing: -0.5px;
   color: $basic-black;
   cursor: pointer;
+  z-index: 1;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

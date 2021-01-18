@@ -77,10 +77,17 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 100%;
+  width: 957px;
+  height: auto;
   line-height: 0;
 
+  @media (max-width: $desktop-width) {
+    width: 698px;
+    content: url("../img/map-tablet@1x.jpg");
+  }
+
   @media (max-width: $tablet-width) {
+    width: 100%;
     min-height: 250px;
   }
 }

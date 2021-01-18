@@ -7,17 +7,19 @@
   min-height: 706px;
   margin-bottom: 150px;
   padding-top: 95px;
-  background-color: $basic-black-2;
+  background-image: linear-gradient($basic-black-2 87.9%, $basic-white 12.1%);
 
   @media (max-width: $desktop-width) {
     min-height: 413px;
     padding-top: 50px;
+    background-image: linear-gradient($basic-black-2 83%, $basic-white 17%);
   }
 
   @media (max-width: $tablet-width) {
     min-height: 384px;
     margin-bottom: 100px;
     padding-top: 64px;
+    background-image: linear-gradient($basic-black-2 88.8%, $basic-white 12.2%);
   }
 }
 
@@ -52,6 +54,7 @@
   justify-content: center;
   width: 340px;
   margin: 0 auto;
+  margin-bottom: 57px;
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
@@ -63,36 +66,24 @@
 
   @media (max-width: $desktop-width) {
     width: 430px;
+    margin-bottom: 42px;
   }
 
   @media (max-width: $tablet-width) {
     width: 100%;
+    margin-bottom: 54px;
     padding-left: 5px;
     padding-right: 5px;
   }
 }
 
 .promo__player {
-  position: absolute;
-  top: 40%;
-  left: 50%;
+  position: relative;
   display: flex;
   flex-wrap: wrap;
-  width: 929px;
-  height: 522px;
-  transform: translateX(-50%);
+  justify-content: center;
+  width: 100%;
 
-  @media (max-width: $desktop-width) {
-    top: 52.3%;
-    width: 503px;
-    height: 282px;
-  }
-
-  @media (max-width: $tablet-width) {
-    top: 70.5%;
-    width: 288px;
-    height: 161px;
-  }
 
   &::after {
     position: absolute;
@@ -124,5 +115,18 @@
 .promo img {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  width: 929px;
+  height: 522px;
+
+  @media (max-width: $desktop-width) {
+
+    width: 503px;
+    height: 282px;
+  }
+
+  @media (max-width: $tablet-width) {
+
+    width: 288px;
+    height: 161px;
+  }
 }
