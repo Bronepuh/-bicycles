@@ -48,12 +48,23 @@
 }
 
 .form__item {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   margin: 0;
   margin-bottom: 20px;
   padding: 0;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 1px;
+    right: 1px;
+    width: 20px;
+    height: 95%;
+    background-color: $basic-white;
+  }
 }
 
 .form input {
@@ -93,4 +104,13 @@
   border: none;
   border-radius: 4px;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }

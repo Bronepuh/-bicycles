@@ -83,12 +83,35 @@
 
   @media (max-width: $desktop-width) {
     width: 698px;
-    content: url("../img/map-tablet@1x.jpg");
   }
 
   @media (max-width: $tablet-width) {
     width: 100%;
     min-height: 250px;
+    background-image: url("../img/map-mobile@1x.webp");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  & img:nth-child(1) {
+    display: flex;
+
+    @media (max-width: $desktop-width) {
+      display: none;
+    }
+  }
+
+  & img:nth-child(2) {
+    display: none;
+
+    @media (max-width: $desktop-width) {
+      display: flex;
+    }
+
+    @media (max-width: $tablet-width) {
+      display: none;
+    }
   }
 }
 

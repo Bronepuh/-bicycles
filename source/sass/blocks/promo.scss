@@ -85,7 +85,7 @@
   width: 100%;
 
 
-  & button {
+  & .promo__button {
     position: absolute;
     content: "";
     top: calc(50% - 32.5px);
@@ -93,7 +93,7 @@
     width: 65px;
     height: 65px;
     background-color: transparent;
-    background-image: url("../../img/icon-play.svg");
+    background-image: url("../img/icon-play.svg");
     background-repeat: no-repeat;
     background-size: cover;
     transform: translateX(-50%);
@@ -113,8 +113,13 @@
       height: 65px;
     }
 
+    &:hover,
     &:focus {
       opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
     }
   }
 }

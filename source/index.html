@@ -13,7 +13,7 @@
 
 <body class="page-body">
   <h1 class="visually-hidden">Добро пожаловать в Лигу А.</h1>
-  <header class="page-header page-header--nojs page-header--opened">
+  <header class="page-header page-header--nojs">
     <div class="page-header__inner">
       <nav class="page-header__navigation navigation">
         <ul class="navigation__list">
@@ -33,7 +33,7 @@
       </nav>
       <button class="page-header__toggle" type="button"></button>
       <div class="page-header__description">
-        <a href="#">лого
+        <a>
           <svg role="img" width="67" height="20">
             <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
           </svg>
@@ -46,11 +46,13 @@
         <ul class="form__list">
           <li class="form__item">
             <label for="name" class="visually-hidden">имя</label>
-            <input type="text" id="name" name="name" placeholder="Введите Ваше Имя" value="" minlength="2" maxlength="10" required>
+            <input type="text" id="name" name="name" placeholder="Введите Ваше Имя" value="" minlength="2"
+              maxlength="10" required>
           </li>
           <li class="form__item">
             <label for="tel" class="visually-hidden">телефон</label>
-            <input type="tel" id="tel" name="tel" placeholder="Введите Ваш номер телефона" value="" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="18" maxlength="18" required>
+            <input type="number" id="tel" name="tel" placeholder="Введите Ваш номер телефона" value="" min="7"
+              max="18" required>
           </li>
         </ul>
         <button type="submit">Подобрать велосипед мечты</button>
@@ -85,22 +87,22 @@
       <h2 id="bicycles">Виды велосипедов</h2>
       <ul class="bicycles__list">
         <li class="bicycles__item">
-          <img src="img/card-1-desktop@1x.jpg" srcset="img/card-1-desktop@2x.jpg 2x" width="342" height="503"
-            alt="картинка велосипеда">
+          <img src="img/card-1-desktop@1x.webp" srcset="img/card-1-desktop@2x.webp 2x" width="342" height="503" alt="картинка велосипеда">
+          <img src="img/card-1-tablet@1x.webp" srcset="img/card-1-tablet@2x.webp 2x" width="342" height="503" alt="картинка велосипеда">
           <div class="bicycles__item-link">
             <a href="#">Дорожный велосипед</a>
           </div>
         </li>
         <li class="bicycles__item">
-          <img src="img/card-2-desktop@1x.jpg" srcset="img/card-2-desktop@2x.jpg 2x" width="342" height="566"
-            alt="картинка велосипеда">
+          <img src="img/card-2-desktop@1x.webp" srcset="img/card-2-desktop@2x.webp 2x" width="342" height="566" alt="картинка велосипеда">
+          <img src="img/card-2-tablet@1x.webp" srcset="img/card-2-tablet@2x.webp 2x" width="342" height="566" alt="картинка велосипеда">
           <div class="bicycles__item-link">
             <a href="#">Горный велосипед</a>
           </div>
         </li>
         <li class="bicycles__item">
-          <img src="img/card-3-desktop@1x.jpg" srcset="img/card-3-desktop@2x.jpg 2x" width="342" height="503"
-            alt="картинка велосипеда">
+          <img src="img/card-3-desktop@1x.webp" srcset="img/card-3-desktop@2x.webp 2x" width="342" height="503" alt="картинка велосипеда">
+          <img src="img/card-3-tablet@1x.webp" srcset="img/card-3-tablet@2x.webp 2x" width="342" height="503" alt="картинка велосипеда">
           <div class="bicycles__item-link">
             <a href="#">Детский велосипед</a>
           </div>
@@ -112,9 +114,8 @@
       <h2 id="promo">Видео про велосипеды</h2>
       <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
       <div class="promo__player">
-        <img src="img/promo-video-bg@1x.jpg" srcset="img/promo-video-bg@2x.jpg 2x" width="929" height="522"
-          alt="промо-ролик">
-        <button type="button" aria-label="player-btn"></button>
+        <img src="img/promo-video-bg@1x.webp" srcset="img/promo-video-bg@2x.webp 2x" width="929" height="522" alt="промо-ролик">
+        <button class="promo__button" type="button" aria-label="player-btn"></button>
       </div>
     </section>
   </main>
@@ -125,7 +126,8 @@
       <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
     </div>
     <div class="page-footer__map">
-      <img src="img/map-desktop@1x.jpg" width="957" height="530" alt="карта">
+      <img src="img/map-desktop@1x.webp" srcset="img/map-desktop@2x.webp 2x" width="957" height="530" alt="карта">
+      <img src="img/map-tablet@1x.webp" srcset="img/map-tablet@2x.webp 2x" width="698" height="545" alt="карта">
     </div>
 
     <div class="page-footer__contacts contacts">
