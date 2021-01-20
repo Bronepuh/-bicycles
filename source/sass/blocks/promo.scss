@@ -11,13 +11,14 @@
 
   @media (max-width: $desktop-width) {
     min-height: 413px;
+    margin-bottom: 65px;
     padding-top: 50px;
     background-image: linear-gradient($basic-black-2 83%, $basic-white 17%);
   }
 
   @media (max-width: $tablet-width) {
     min-height: 384px;
-    margin-bottom: 100px;
+    margin-bottom: 51px;
     padding-top: 64px;
     background-image: linear-gradient($basic-black-2 88.8%, $basic-white 12.2%);
   }

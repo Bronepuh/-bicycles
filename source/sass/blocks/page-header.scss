@@ -16,6 +16,7 @@
   }
 
   @media (max-width: $desktop-width) {
+    min-height: auto;
     background-color: $basic-white;
     background-image: none;
   }
@@ -177,7 +178,7 @@
   width: 67px;
   height: 20px;
   margin-left: 0;
-  margin-bottom: 28px;
+  margin-bottom: 32px;
 
   @media (max-width: $desktop-width) {
     margin-left: 23px;

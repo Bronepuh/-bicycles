@@ -46,6 +46,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-content: flex-start;
+  align-items: flex-start;
   max-width: 1128px;
   margin: 0 auto;
   padding: 0;
@@ -58,6 +60,7 @@
   @media (max-width: $desktop-width) {
     padding-left: 25px;
     padding-right: 25px;
+    padding-bottom: 54px;
   }
 
   @media (max-width: 980px) {
@@ -68,6 +71,7 @@
   }
 
   @media (max-width: $tablet-width) {
+    padding-bottom: 0;
     gap: 42px;
   }
 }
@@ -82,6 +86,11 @@
   margin-top: 10px;
   margin-bottom: 50px;
   margin-right: 50px;
+
+  & picture,
+  & img {
+    z-index: 1;
+  }
 
   &::before {
     position: absolute;
@@ -114,10 +123,13 @@
   }
 
   @media (max-width: 980px) {
+    margin-bottom: 0;
     margin-right: 0;
   }
 
   @media (max-width: $tablet-width) {
+    margin-bottom: 54px;
+
     &::before {
       top: 201px;
       left: -25px;
@@ -126,6 +138,12 @@
 
   @media (max-width: 690px) {
     margin-right: 0;
+  }
+
+  &:first-child {
+    @media (max-width: $tablet-width) {
+      margin-bottom: 0;
+    }
   }
 
   &:nth-child(3n-1) {
@@ -237,91 +255,30 @@
       margin-bottom: 38px;
     }
   }
-
-  &:nth-child(1) img:nth-child(1) {
-    @media (max-width: $desktop-width) {
-      display: none;
-
-      @media (min-resolution: 2dppx) {
-        content: url("../img/card-1-tablet@2x.webp");
-      }
-    }
-  }
-
-  &:nth-child(1) img:nth-child(2) {
-    display: none;
-
-    @media (max-width: $desktop-width) {
-      display: flex;
-
-      @media (min-resolution: 2dppx) {
-        content: url("../img/card-1-tablet@2x.webp");
-      }
-    }
-  }
-
-  &:nth-child(2) img:nth-child(1) {
-    @media (max-width: $desktop-width) {
-      display: none;
-
-      @media (min-resolution: 2dppx) {
-        content: url("../img/card-2-tablet@2x.webp");
-      }
-    }
-  }
-
-  &:nth-child(2) img:nth-child(2) {
-    display: none;
-
-    @media (max-width: $desktop-width) {
-      display: flex;
-
-      @media (min-resolution: 2dppx) {
-        content: url("../img/card-2-tablet@2x.webp");
-      }
-    }
-  }
-
-  &:nth-child(3) img:nth-child(1) {
-    @media (max-width: $desktop-width) {
-      display: none;
-
-      @media (min-resolution: 2dppx) {
-        content: url("../img/card-3-tablet@2x.webp");
-      }
-    }
-  }
-
-  &:nth-child(3) img:nth-child(2) {
-    display: none;
-
-    @media (max-width: $desktop-width) {
-      display: flex;
-
-      @media (min-resolution: 2dppx) {
-        content: url("../img/card-3-tablet@2x.webp");
-      }
-    }
-  }
 }
 
 .bicycles img {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  width: 342px;
   height: auto;
   border-radius: 14px;
   overflow: hidden;
   cursor: pointer;
-  z-index: 1;
+  object-fit: cover;
 
-  @media (max-width: $tablet-width) {
-    // width: 230px;
+  @media (max-width: 1200px) {
+    width: 290px;
+    height: auto;
+  }
+
+  @media (max-width: $desktop-width) {
+    width: 270px;
+    height: 300px;
   }
 
   &:hover,
   &:focus {
-    margin-top: -5px;
     box-shadow: 0 0 10px $basic-black;
     opacity: 0.6;
   }
