@@ -87,11 +87,6 @@
   margin-bottom: 50px;
   margin-right: 50px;
 
-  & picture,
-  & img {
-    z-index: 1;
-  }
-
   &::before {
     position: absolute;
     content: "";
@@ -255,6 +250,11 @@
       margin-bottom: 38px;
     }
   }
+}
+
+.bicycles__item picture,
+.bicycles__item img {
+  z-index: 1;
 }
 
 .bicycles img {

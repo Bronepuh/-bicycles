@@ -84,44 +84,43 @@
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
+}
 
+.promo__button {
+  position: absolute;
+  content: "";
+  top: calc(50% - 32.5px);
+  left: 50%;
+  width: 65px;
+  height: 65px;
+  background-color: transparent;
+  background-image: url("../img/icon-play.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translateX(-50%);
+  border: none;
+  outline: none;
+  cursor: pointer;
 
-  & .promo__button {
-    position: absolute;
-    content: "";
+  @media (max-width: $desktop-width) {
+    top: calc(50% - 45px);
+    width: 90px;
+    height: 90px;
+  }
+
+  @media (max-width: $tablet-width) {
     top: calc(50% - 32.5px);
-    left: 50%;
     width: 65px;
     height: 65px;
-    background-color: transparent;
-    background-image: url("../img/icon-play.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    transform: translateX(-50%);
-    border: none;
-    outline: none;
-    cursor: pointer;
+  }
 
-    @media (max-width: $desktop-width) {
-      top: calc(50% - 45px);
-      width: 90px;
-      height: 90px;
-    }
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
 
-    @media (max-width: $tablet-width) {
-      top: calc(50% - 32.5px);
-      width: 65px;
-      height: 65px;
-    }
-
-    &:hover,
-    &:focus {
-      opacity: 0.6;
-    }
-
-    &:active {
-      opacity: 0.3;
-    }
+  &:active {
+    opacity: 0.3;
   }
 }
 
